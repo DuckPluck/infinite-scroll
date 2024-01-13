@@ -1,0 +1,33 @@
+.post-card {
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  border-width: 1px;
+  border-color: #374151;
+  background-color: #1F2937;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+  display: flex;
+  flex-flow: column;
+  margin: auto;
+}
+
+.post-card__title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ffffff;
+  text-overflow: ellipsis;
+  text-align: start;
+  overflow: hidden;
+  margin: 0 0 1rem;
+}
+
+.post-card__description {
+  margin: 0 0 0.75rem;
+  font-weight: 400;
+  color: #9CA3AF;
+}
+
+.post-card__button {
+  margin-top: 1rem;
+  width: fit-content;
+  align-self: flex-end;
+}
