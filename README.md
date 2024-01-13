@@ -1,30 +1,24 @@
-# React + TypeScript + Vite
+[деплой](https://duckpluck.github.io/infinite-scroll/)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Built using:
+1. ReactTS
+2. RTK Query
+3. React Router
 
-Currently, two official plugins are available:
+### Project startup:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clone a repository.
 
-## Expanding the ESLint configuration
+   git clone git@github.com:DuckPluck/infinite-scroll.git
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+2. Enter the project folder.
 
-- Configure the top-level `parserOptions` property like this:
+   cd infinite-scroll
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+3. Install dependencies.
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+   yarn
+
+4. Launch project.
+
+   yarn dev
