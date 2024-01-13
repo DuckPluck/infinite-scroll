@@ -1,4 +1,4 @@
-[деплой](https://duckpluck.github.io/infinite-scroll/)
+Deploy: https://duckpluck.github.io/infinite-scroll/
 
 ### Built using:
 1. ReactTS
