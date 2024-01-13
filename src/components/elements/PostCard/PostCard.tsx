@@ -20,7 +20,7 @@ export const PostCard = ({ className, post }: Props) => {
 
       <p className="post-card__description">{post.body}</p>
 
-      <Button to="/" forwardBack className="post-card__button">
+      <Button to="/infinite-scroll/" forwardBack className="post-card__button">
         назад
       </Button>
     </div>

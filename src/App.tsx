@@ -7,10 +7,10 @@ import { PostViewPage } from './pages/PostViewPage';
 function App() {
   return (
     <Routes>
-      <Route path="/">
+      <Route path="/infinite-scroll">
         <Route index element={<PostListPage />} />
-        <Route path="post/:id" element={<PostViewPage />} />
-        <Route path="*" element={<NoMatchPage />} />
+        <Route path="/infinite-scroll/post/:id" element={<PostViewPage />} />
+        <Route path="/infinite-scroll/*" element={<NoMatchPage />} />
       </Route>
     </Routes>
   );
