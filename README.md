@@ -9,16 +9,16 @@ Deploy: https://duckpluck.github.io/infinite-scroll/
 
 1. Clone a repository.
 
-   git clone git@github.com:DuckPluck/infinite-scroll.git
+   ```git clone git@github.com:DuckPluck/infinite-scroll.git```
 
 2. Enter the project folder.
 
-   cd infinite-scroll
+   ```cd infinite-scroll```
 
 3. Install dependencies.
 
-   yarn
+   ```yarn```
 
 4. Launch project.
 
-   yarn dev
+   ```yarn dev```
