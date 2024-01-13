@@ -6,6 +6,7 @@ import { postApi } from '../../../API/postApi';
 import { PostListItem } from '../PostListItem/PostListItem';
 
 import './PostList.scss';
+import { Loading } from '../../ui/Loading/Loading';
 
 
 interface Props {
@@ -24,8 +25,8 @@ export const PostList = ({ className }: Props) => {
 
   const [postStart, setPostStart] = useState(+getValueFromStorage('previousPostStart') || 0);
 
-  const { data: posts } =
-    postApi.useFetchAllPostsQuery<{ data?: Post[] }>({ limit: 20, start: postStart });
+  const { data: posts, isLoading } =
+    postApi.useFetchAllPostsQuery<{ data?: Post[], isLoading: boolean }>({ limit: 20, start: postStart });
 
   const { ref: firstPost, inView: inViewFirstPost } = useInView({
     threshold: .1,
@@ -64,28 +65,32 @@ export const PostList = ({ className }: Props) => {
         <h5 className="post-list__title">Список постов</h5>
       </div>
 
-      <div className="post-list__items-container">
-        <ul role="list" className="post-list__items-ul">
-          {posts?.map((post, i) => (
+      {isLoading ? (
+        <Loading />
+      ) : (
+        <div className="post-list__items-container">
+          <ul role="list" className="post-list__items-ul">
+            {posts?.map((post, i) => (
 
-            i === 0 ? (
-              <li className="post-list-item__li" key={post.id} ref={firstPost}>
-                <PostListItem post={post} />
-              </li>
+              i === 0 ? (
+                <li className="post-list-item__li" key={post.id} ref={firstPost}>
+                  <PostListItem post={post} />
+                </li>
 
-            ) : i === posts.length - 1 ? (
-              <li className="post-list-item__li" key={post.id} ref={lastPost}>
-                <PostListItem post={post} />
-              </li>
+              ) : i === posts.length - 1 ? (
+                <li className="post-list-item__li" key={post.id} ref={lastPost}>
+                  <PostListItem post={post} />
+                </li>
 
-            ) : (
-              <li className="post-list-item__li" key={post.id}>
-                <PostListItem post={post} />
-              </li>
-            )
-          ))}
-        </ul>
-      </div>
+              ) : (
+                <li className="post-list-item__li" key={post.id}>
+                  <PostListItem post={post} />
+                </li>
+              )
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
   );
 };
